@@ -3,30 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sachit Lakkaraju's Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <title>Sachit Lakkaraju</title>
+    <style>
+        :root {
+            --background: #1e1e2e;
+            --text: #cdd6f4;
+            --accent: #b4befe;
+            --secondary: #a6adc8;
+            --highlight: #c9a2ff;
+            --spacing: 2rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Space Mono", Consolas, Monaco, "Courier New", monospace;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--spacing);
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(180, 190, 254, 0.2);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--highlight);
+        }
+
+        nav {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        a:hover {
+            opacity: 0.7;
+            color: var(--highlight);
+        }
+
+        .toggle-theme {
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        main {
+            margin-top: var(--spacing);
+        }
+
+        section {
+            margin-bottom: calc(var(--spacing) * 2);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--highlight);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .projects {
+            margin-top: var(--spacing);
+        }
+
+        .projects h3 {
+            color: var(--highlight);
+            font-size: 1.75rem;
+            margin-top: var(--spacing);
+            margin-bottom: 0.5rem;
+        }
+
+        .project {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .project:hover {
+            background-color: rgba(180, 190, 254, 0.05);
+        }
+
+        .project-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-desc {
+            color: var(--secondary);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <h1>Sachit Lakkaraju</h1>
-            <nav>
-                <a href="https://github.com/your-github-username" target="_blank">Github</a>
-                <a href="#projects">Projects</a>
-            </nav>
-        </div>
+        <h1>Sachit Lakkaraju</h1>
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="https://linkedin.com/" target="_blank">LinkedIn</a> |
+            <a href="https://github.com/sslaku/" target="_blank">GitHub</a> |
+            <a href="#projects">Projects</a>
+        </nav>
+        <button class="toggle-theme" aria-label="Toggle dark/light mode">🌙</button>
     </header>
-    
-    <section class="introduction">
-        <p>Hello! I'm Sachit Lakkaraju, a passionate developer with a keen interest in building innovative projects. Welcome to my portfolio!</p>
-    </section>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <p>Here you will find a list of my projects.</p>
-        <!-- Placeholder for projects listing -->
-    </section>
+    <main>
+        <section id="home">
+            <h2>Hello!</h2>
+            <p>
+                My name is Sachit Lakkaraju, this is just a mock up of my website. It's currently under development, though I intendend on displaying my previous and future projects here. Here's some random text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+            </p>
+        </section>
 
-    <script src="scripts/main.js"></script>
+        <section id="projects" class="projects">
+            <h3>Projects</h3>
+            
+            <div class="project">
+                <a href="#project1" class="project-title">Example Project 1</a>
+                <p class="project-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div class="project">
+                <a href="#project2" class="project-title">Example Project 2</a>
+                <p class="project-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div class="project">
+                <a href="#project3" class="project-title">Example Project 3</a>
+                <p class="project-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+
+            <div class="project">
+                <a href="#project4" class="project-title">Example Project 4</a>
+                <p class="project-desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Simple theme toggle between dark and light
+        const themeToggle = document.querySelector('.toggle-theme');
+        themeToggle.addEventListener('click', () => {
+            if (document.body.style.getPropertyValue('--background') === '#f4f4fb') {
+                // Switch to dark theme
+                document.body.style.setProperty('--background', '#1e1e2e');
+                document.body.style.setProperty('--text', '#cdd6f4');
+                document.body.style.setProperty('--accent', '#b4befe');
+                document.body.style.setProperty('--secondary', '#a6adc8');
+                document.body.style.setProperty('--highlight', '#c9a2ff');
+                themeToggle.innerHTML = '🌙';
+            } else {
+                // Switch to light theme
+                document.body.style.setProperty('--background', '#f4f4fb');
+                document.body.style.setProperty('--text', '#333344');
+                document.body.style.setProperty('--accent', '#7b66ff');
+                document.body.style.setProperty('--secondary', '#6e7096');
+                document.body.style.setProperty('--highlight', '#9d71ea');
+                themeToggle.innerHTML = '☀️';
+            }
+        });
+    </script>
 </body>
 </html>
